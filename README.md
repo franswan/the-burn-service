@@ -8,17 +8,18 @@ the-burn-service contract: 0x986fb79451E13a28D98647b24e23202F495B2E7A
 
 
 
+### NOW
+
+Exporting transactions from bscscan into burns.csv
+
+Converting to JSON
+
+Reading burns.json  in _data in 11ty to build list of burns on burn service website (list page and individual burns pages)
 
 
+### SOON
 
-
-
-
-### HOW
-
-exporting transactions from bscscan into burns.csv
-
-read burns.csv  in _data in 11ty to build list of burns on burn service website (list page and individual burns pages)
+Scheduled automatic update of burn listings. Any tokens sent to the burn address will appear in our directory after daily cron.
 
 
 
