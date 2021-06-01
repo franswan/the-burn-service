@@ -12,7 +12,7 @@ const opts = {
     method: "POST",
     headers: {
         "Content-Type": "application/json",
-      "X-API-KEY": "BQYA74HBF6B5RE3KmhKqAaKOxsdAcUKu"
+      "X-API-KEY": ""
     },
     body: JSON.stringify({
         query
