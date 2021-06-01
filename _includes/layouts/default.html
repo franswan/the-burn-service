@@ -1,26 +1,63 @@
 <!DOCTYPE html>
+<!--                 (  )
+//               (  .      )
+//       )           (              )
+//              .  '   .   '  .  '  .
+//     (    , )       (.   )  (   ',    )
+//      .' ) ( . )    ,  ( ,     )   ( .
+//   ). , ( .   (  ) ( , ')  .' (  ,    )
+//  (_,) . ), ) _) _,')  (, ) '. )  ,. (' )
+//
+//           T H E   B U R N   C O 
+//
+//  Where tokens go to never return  -->
 <html lang="en">
   {% include _head.html %}
-<body>
+<body>  
+
+
+
   
-  <article class="athelas">
+
+
     <div class="vh-100 dt w-100 tc bg-dark-gray white cover" style="background:url(/images/Southern_Alps_in_Winter.jpg) no-repeat center;">
       <div class="dtc v-mid">
         <div class="tc">
-          <h1 class="f1 f-headline-l fw5 white">The Burn Service</h1>
+          <h1 class="f1 f-headline-l fw5 red">The Burn Service</h1>
           <img src="/images/snow-dogran.png" class="br-100 pa1 ba b--white bg-lightest-blue h5 w5" alt="avatar" style="background-image: url(images/blue-bg-speckled.png);">
         </div>
         
         <blockquote class="ph0 mh0 measure f3 lh-copy center">
           <p class="fw5 lightest-blue">
             
-            Notarized destruction of <span class="vhs-flash">burn</span> wallet keys. A service for token developers and marketers.
+            What <span class="vhs-flash orange">burns</span>, never returns.
           </p>
-          <cite class="f6 ttu tracked fs-normal">by <span class="yellow">DOGRAN</span></cite><br>
-          <!-- <img src="/images/torch.gif" /> -->
+          <cite class="f6 ttu tracked fs-normal">by <span class="yellow">FRENCORP</span></cite><br>
         </blockquote>
       </div>
     </div>
+
+
+
+
+  <article class="mw9 center pa3 pa4-ns mv3 sans-serif">
+
+
+    {% for burn in burns -%}
+    <article class="dt w-100 bb b--black-05 pb2 mt2">
+      <div class="dtc v-mid pl3">
+        <h1 class="f6 f5-ns fw6 lh-title black mv0 ttu">{{ burn.TokenName }}</h1>
+        <h2 class="f6 fw4 mt0 mb0 black-60">${{ burn.TokenSymbol }}</h2>
+        <p>{{ burn.Value }} burned on {{ burn.DateTime }}</p>
+      </div>
+      <div class="dtc v-mid">
+        <form class="w-100 tr">
+          <a href="/burns/{{ burn.Txhash }}/" class="f6 button-reset bg-black white br2 pa3 dim pointer pv1 black-60" type="submit">INFO</a>
+        </form>
+      </div>
+    </article>
+    
+    {% endfor %}
   </article>
 
 
@@ -30,29 +67,11 @@
 
   <main class="pa3 pa5-ns">
     <p class="f3 lh-copy measure-narrow">
-      In the event you have no burning mechanism built into your contracts, we can offer a destination wallet to send your tokens to to be destroyed. 
-    </p>
-    <p class="f3 lh-copy measure-narrow">
-      We provide a notarized proof of their destruction and having tossed away the keys we stamp this burn wallet with our seal, allowing you to credibly claim loss of inventory.
+      Render your tokens burned by sending them to 0x986fb79451e13a28d98647b24e23202f495b2e7a
     </p>
  </main>
 
 </article>
-
-
-<h3 class="center ttu fw5 black-50">Example widget</h3>
-<article class="bg-white center mw5 ba b--black-10 mv4">
-  <div class="pv2 ph3">
-     <h1 class="f6 ttu center system-sans-serif">The Burn Service</h1>
-  </div>
-  <img src="/images/snow-dogran-seal.png" class="br-100 pa1 ba b--white h3 w3" alt="">
-  <div class="pa3">
-    <a href="#" class="link dim lh-title">500,000 Tokens Burned</a>
-    <small class="gray db pv2">DOGRAN - Burn hash:<br><time>0x987hc7jcwo875xiw7e56i7ncw</time></small>
-  </div>
-</article>
-
-  {% include _google_analytics.html %}
 
 </body>
 </html>

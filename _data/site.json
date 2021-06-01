@@ -1,15 +1,9 @@
 {
   "title": "The Burn Service",
   "url": "https://burnservice.netlify.app/",
-  "description": "Notorized destruction of tokens",
+  "description": "destroy tokens",
   "googleID": "xxxxxxxxxxxxxxx",
   "repo": "http://github.com/franswan/the-burn-service",
-  "feed": {
-    "subtitle": "Notorized destruction of tokens",
-    "filename": "feed.xml",
-    "path": "/feed/feed.xml",
-    "id": "https://myurl.com/"
-  },
   "author": {
     "name": "Fran Swan",
     "email": "franswan@protonmail.com"

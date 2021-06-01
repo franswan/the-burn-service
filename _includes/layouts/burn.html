@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!--                 (  )
+//               (  .      )
+//       )           (              )
+//              .  '   .   '  .  '  .
+//     (    , )       (.   )  (   ',    )
+//      .' ) ( . )    ,  ( ,     )   ( .
+//   ). , ( .   (  ) ( , ')  .' (  ,    )
+//  (_,) . ), ) _) _,')  (, ) '. )  ,. (' )
+//
+//           T H E   B U R N   C O 
+//
+//  Where tokens go to never return  -->
+<html lang="en">
+  {% include _head.html %}
+<body>  
+
+  
+<article class="pa3 pa5-ns" data-name="slab-stat">
+    the-burn-service <br>What burns never returns
+    <h1>{{ burn.TokenName }}</h1>
+    
+    <dl class="dib mr5">
+        <dd class="f6 f5-ns b ml0">{{ burn.TokenName }} Contract Address</dd>
+        <dd class="ml0"><a class="link" href="https://bscscan.com/address/{{ burn.ContractAddress }}">{{ burn.ContractAddress }}</a></dd>
+      </dl>
+    <dl class="dib mr5">
+        <dd class="f6 f5-ns b ml0">Token Symbol</dd>
+        <dd class="f3 f2-ns b ml0">{{ burn.TokenSymbol }}</dd>
+      </dl>
+    <dl class="dib mr5">
+      <dd class="f6 f5-ns b ml0">Burned Tokens</dd>
+      <dd class="f3 f2-ns b ml0">{{ burn.Value }}</dd>
+    </dl>
+    <dl class="dib mr5">
+      <dd class="f6 f5-ns b ml0">Burn Date</dd>
+      <dd class="f3 f2-ns b ml0">{{ burn.DateTime }}</dd>
+    </dl>
+    <dl class="dib mr5">
+        <dd class="f4 f5-ns ml0">UnixTimestamp: {{ burn.UnixTimestamp }}</dd>
+      </dl>
+    
+    
+    <dl class="dib mr5">
+      <dd class="f6 f5-ns b ml0">Sent From</dd>
+      <dd class="ml0"><a class="link" href="https://bscscan.com/address/{{ burn.From }}">{{ burn.From }}</a></dd>
+    </dl>
+    <dl class="dib mr5">
+        <dd class="ml0">Sent To</dd>
+        <dd class="ml0"><a class="link" href="https://bscscan.com/address/{{ burn.To }}">{{ burn.To }}</a></dd>
+      </dl>
+    
+    <dl class="dib mr5">
+      <dd class="f6 f5-ns b ml0">Transaction Hash</dd>
+      <dd class="f3 f2-ns b ml0"><a class="link" href="https://bscscan.com/tx/{{ burn.Txhash }}">{{ burn.Txhash }}</a></dd>
+    </dl>
+  </article>
+
+
+</body>
+</html>
