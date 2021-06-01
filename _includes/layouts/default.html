@@ -11,16 +11,14 @@
 //           T H E   B U R N   C O 
 //
 //  Where tokens go to never return  -->
+
 <html lang="en">
-  {% include _head.html %}
+
+{% include _head.html %}
+
 <body>  
 
-
-
-  
-
-
-    <div class="vh-100 dt w-100 tc cover">
+  <div class="vh-100 dt w-100 tc cover">
       <div class="dtc v-mid">
         <div class="tc">
           <h1 class="f1 f-headline-l fw5 red">The Burn Service</h1>
@@ -30,51 +28,34 @@
         <blockquote class="ph0 mh0 measure f3 lh-copy center">
           <p class="fw5 lightest-blue">
             
-            What <span class="vhs-flash orange">burns</span>, never returns.
+            What <span class="vhs-flash red">burns</span>, never returns.
           </p>
           <cite class="f6 ttu tracked fs-normal">by <span class="yellow">FRENCORP</span></cite><br>
         </blockquote>
       </div>
     </div>
 
-
-
-
-
-
-  <article class="mw9 center pa3 pa4-ns mv3">
-  
-  
-
-    <main class="pa3 pa5-ns">
-      <p class="f3 lh-copy measure-narrow">
-        Burn</span> your tokens by sending them to: <span class="b orange">0x986fb79451e13a28d98647b24e23202f495b2e7a</span>
-      </p>
-   </main>
-  
-  </article>
-
-
-  <article class="mw9 center pa3 pa4-ns mv3 sans-serif">
-
-
-    {% for burn in burns -%}
-    <article class="dt w-100 bb b--black-05 pb2 mt2">
-      <div class="dtc v-mid pl3">
-        <h1 class="f6 f5-ns fw6 lh-title black mv0 ttu">{{ burn.TokenName }}</h1>
-        <h2 class="f6 fw4 mt0 mb0 black-60">${{ burn.TokenSymbol }}</h2>
-        <p>{{ burn.Value }} burned on {{ burn.DateTime }}</p>
-      </div>
-      <div class="dtc v-mid">
-        <form class="w-100 tr">
-          <a href="/burns/{{ burn.Txhash }}/" class="f6 button-reset bg-black white br2 pa3 dim pointer pv1 black-60" type="submit">INFO</a>
-        </form>
-      </div>
+    <article class="mw9 center pa3 pa4-ns mv3">
+      <main class="pa3 pa5-ns">
+        <p class="f3 lh-copy measure-narrow">
+          Burn</span> your BSC tokens by sending them to: <span class="b orange">0x986fb79451e13a28d98647b24e23202f495b2e7a</span>
+        </p>
+    </main>
     </article>
-    
-    {% endfor %}
-  </article>
 
+    <article class="mw9 center pa3 pa4-ns mv3">
+    <h2 class="fw1">Recent Burns</h2>
+    <ul class="list pl0">
+      {% for burn in burns -%}
+      <li class="pa3 pa4-ns bb b--black-10">
+        <span class="db f3 mb1">{{ burn.TokenName }}</span>
+        <span class="f5 db lh-copy measure">
+          On {{ burn.DateTime }} <br><span class="b">{{ burn.Value }}</span> <span class="orange">${{ burn.TokenSymbol }}</span> were <span class="red vhs-pulse ">burned</span> </span>
+          <a href="/burns/{{ burn.Txhash }}/" class="f6 bg-black white br2 pa2 ma3 link dim pointer black-60" type="submit">VERIFY</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </article>
 
 </body>
 </html>

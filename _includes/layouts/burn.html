@@ -17,9 +17,12 @@
 
   
 <article class="pa3 pa5-ns" data-name="slab-stat">
-    the-burn-service <br>What burns never returns
+    <a href="/">the-burn-service</a> <br>What burns never returns
     <h1>{{ burn.TokenName }}</h1>
-    
+    <dl class="dib mr5">
+        <dd class="f6 f5-ns b ml0">Transaction Hash</dd>
+        <dd class="f3 f2-ns b ml0"><a class="link" href="https://bscscan.com/tx/{{ burn.Txhash }}">{{ burn.Txhash }}</a></dd>
+      </dl>    
     <dl class="dib mr5">
         <dd class="f6 f5-ns b ml0">{{ burn.TokenName }} Contract Address</dd>
         <dd class="ml0"><a class="link" href="https://bscscan.com/address/{{ burn.ContractAddress }}">{{ burn.ContractAddress }}</a></dd>
@@ -38,9 +41,7 @@
     </dl>
     <dl class="dib mr5">
         <dd class="f4 f5-ns ml0">UnixTimestamp: {{ burn.UnixTimestamp }}</dd>
-      </dl>
-    
-    
+      </dl>    
     <dl class="dib mr5">
       <dd class="f6 f5-ns b ml0">Sent From</dd>
       <dd class="ml0"><a class="link" href="https://bscscan.com/address/{{ burn.From }}">{{ burn.From }}</a></dd>
@@ -48,12 +49,7 @@
     <dl class="dib mr5">
         <dd class="ml0">Sent To</dd>
         <dd class="ml0"><a class="link" href="https://bscscan.com/address/{{ burn.To }}">{{ burn.To }}</a></dd>
-      </dl>
-    
-    <dl class="dib mr5">
-      <dd class="f6 f5-ns b ml0">Transaction Hash</dd>
-      <dd class="f3 f2-ns b ml0"><a class="link" href="https://bscscan.com/tx/{{ burn.Txhash }}">{{ burn.Txhash }}</a></dd>
-    </dl>
+      </dl>    
   </article>
 
 
